@@ -248,6 +248,9 @@ namespace GIMPSTeam2Lead
 			Console.WriteLine($"ECM        | {AsString(ecm.WeAre.Place, 2)}  | {AsString(ecm.PrevTeam.GHzDays - ecm.WeAre.GHzDays, 9)} | {AsString(ecm.WeAre.GHzDays - ecm.NextTeam.GHzDays, 9)}");
 			Console.WriteLine($"ECMF       | {AsString(ecmf.WeAre.Place, 2)}  | {AsString(ecmf.PrevTeam.GHzDays - ecmf.WeAre.GHzDays, 9)} | {AsString(ecmf.WeAre.GHzDays - ecmf.NextTeam.GHzDays, 9)}");
 			Console.WriteLine(RU.TBottom);
+			Console.WriteLine();
+			Console.WriteLine(RU.Ads);
+			Console.WriteLine(RU.Link);
 
 			Console.ReadKey();
 

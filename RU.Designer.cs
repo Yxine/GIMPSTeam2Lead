@@ -61,6 +61,15 @@ namespace GIMPSTeam2Lead {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Вступайте в мою команду ComputerraRU!.
+        /// </summary>
+        internal static string Ads {
+            get {
+                return ResourceManager.GetString("Ads", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {
         ///	&quot;p&quot;: { &quot;place&quot;: &quot;p.place&quot;, &quot;name&quot;: &quot;p.name&quot;, &quot;ghzdays&quot;: &quot;p.ghzdays&quot; },
         ///	&quot;c&quot;: { &quot;place&quot;: &quot;c.place&quot;, &quot;name&quot;: &quot;c.name&quot;, &quot;ghzdays&quot;: &quot;c.ghzdays&quot; },
@@ -70,6 +79,15 @@ namespace GIMPSTeam2Lead {
         internal static string JSON {
             get {
                 return ResourceManager.GetString("JSON", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://computerraru.ru.
+        /// </summary>
+        internal static string Link {
+            get {
+                return ResourceManager.GetString("Link", resourceCulture);
             }
         }
         
