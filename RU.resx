@@ -127,19 +127,25 @@
   <data name="TeamName" xml:space="preserve">
     <value>ComputerraRU</value>
   </data>
-	<data name="TH" xml:space="preserve">
-    <value>Тип        | Мы  | До лидера | До нас</value>
+  <data name="TH" xml:space="preserve">
+    <value> Type       | We  | To Leader | To Us</value>
   </data>
-	<data name="TBottom" xml:space="preserve">
-    <value>-----------------------------------------</value>
+  <data name="TBottom" xml:space="preserve">
+    <value> -----------------------------------------</value>
   </data>
-	<data name="Title" xml:space="preserve">
+  <data name="Title" xml:space="preserve">
     <value>GIMPS Team 2 Lead</value>
   </data>
-	<data name="Ads" xml:space="preserve">
-    <value>Вступайте в мою команду ComputerraRU!</value>
+  <data name="Mult" xml:space="preserve">
+    <value> **********************************************************************************************************************</value>
   </data>
-	<data name="Link" xml:space="preserve">
-    <value>http://computerraru.ru</value>
+  <data name="LineBR" xml:space="preserve">
+    <value> *                                                                                                                    *</value>
+  </data>
+  <data name="URL" xml:space="preserve">
+    <value> * http://computerraru.ru/software/gimpsteam2lead                                                                     *</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value> * Larin Alexsandr                                                                                                    *</value>
   </data>
 </root>

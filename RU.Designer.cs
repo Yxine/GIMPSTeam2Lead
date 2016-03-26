@@ -61,11 +61,11 @@ namespace GIMPSTeam2Lead {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Вступайте в мою команду ComputerraRU!.
+        ///   Looks up a localized string similar to  * Larin Alexsandr                                                                                                    *.
         /// </summary>
-        internal static string Ads {
+        internal static string Author {
             get {
-                return ResourceManager.GetString("Ads", resourceCulture);
+                return ResourceManager.GetString("Author", resourceCulture);
             }
         }
         
@@ -83,16 +83,25 @@ namespace GIMPSTeam2Lead {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://computerraru.ru.
+        ///   Looks up a localized string similar to  *                                                                                                                    *.
         /// </summary>
-        internal static string Link {
+        internal static string LineBR {
             get {
-                return ResourceManager.GetString("Link", resourceCulture);
+                return ResourceManager.GetString("LineBR", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -----------------------------------------.
+        ///   Looks up a localized string similar to  **********************************************************************************************************************.
+        /// </summary>
+        internal static string Mult {
+            get {
+                return ResourceManager.GetString("Mult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  -----------------------------------------.
         /// </summary>
         internal static string TBottom {
             get {
@@ -110,7 +119,7 @@ namespace GIMPSTeam2Lead {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Тип        | Мы  | До лидера | До нас.
+        ///   Looks up a localized string similar to  Type       | We  | To Leader | To Us.
         /// </summary>
         internal static string TH {
             get {
@@ -124,6 +133,15 @@ namespace GIMPSTeam2Lead {
         internal static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  * http://computerraru.ru/software/gimpsteam2lead                                                                     *.
+        /// </summary>
+        internal static string URL {
+            get {
+                return ResourceManager.GetString("URL", resourceCulture);
             }
         }
     }
