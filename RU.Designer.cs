@@ -71,9 +71,9 @@ namespace GIMPSTeam2Lead {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///	&quot;p&quot;: { &quot;place&quot;: &quot;p.place&quot;, &quot;name&quot;: &quot;p.name&quot;, &quot;ghzdays&quot;: &quot;p.ghzdays&quot; },
-        ///	&quot;c&quot;: { &quot;place&quot;: &quot;c.place&quot;, &quot;name&quot;: &quot;c.name&quot;, &quot;ghzdays&quot;: &quot;c.ghzdays&quot; },
-        ///	&quot;n&quot;: { &quot;place&quot;: &quot;n.place&quot;, &quot;name&quot;: &quot;n.name&quot;, &quot;ghzdays&quot;: &quot;n.ghzdays&quot; }
+        ///	&quot;p&quot;: { &quot;place&quot;: p.place, &quot;name&quot;: &quot;p.name&quot;, &quot;ghzdays&quot;: p.ghzdays },
+        ///	&quot;c&quot;: { &quot;place&quot;: c.place, &quot;name&quot;: &quot;c.name&quot;, &quot;ghzdays&quot;: c.ghzdays },
+        ///	&quot;n&quot;: { &quot;place&quot;: n.place, &quot;name&quot;: &quot;n.name&quot;, &quot;ghzdays&quot;: n.ghzdays }
         ///}.
         /// </summary>
         internal static string JSON {
@@ -101,7 +101,7 @@ namespace GIMPSTeam2Lead {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  -----------------------------------------.
+        ///   Looks up a localized string similar to  ----------------------------------------.
         /// </summary>
         internal static string TBottom {
             get {
@@ -119,7 +119,7 @@ namespace GIMPSTeam2Lead {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  Type       | We  | To Leader | To Us.
+        ///   Looks up a localized string similar to  Type       | We | To Leader | To Us.
         /// </summary>
         internal static string TH {
             get {

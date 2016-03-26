@@ -131,9 +131,9 @@ namespace GIMPSTeam2Lead
 					.Replace("p.name", places.PrevTeam.Name)
 					.Replace("c.name", places.WeAre.Name)
 					.Replace("n.name", places.NextTeam.Name)
-					.Replace("p.ghzdays", places.PrevTeam.GHzDays.ToString(CultureInfo.CurrentCulture))
-					.Replace("c.ghzdays", places.WeAre.GHzDays.ToString(CultureInfo.CurrentCulture))
-					.Replace("n.ghzdays", places.NextTeam.GHzDays.ToString(CultureInfo.CurrentCulture))
+					.Replace("p.ghzdays", places.PrevTeam.GHzDays.ToString(CultureInfo.CurrentCulture).Replace(",", "."))
+					.Replace("c.ghzdays", places.WeAre.GHzDays.ToString(CultureInfo.CurrentCulture).Replace(",", "."))
+					.Replace("n.ghzdays", places.NextTeam.GHzDays.ToString(CultureInfo.CurrentCulture).Replace(",", "."))
 					.ToString()
 			);
 			return places;
@@ -190,9 +190,9 @@ namespace GIMPSTeam2Lead
 					.Replace("p.name", places.PrevTeam.Name)
 					.Replace("c.name", places.WeAre.Name)
 					.Replace("n.name", places.NextTeam.Name)
-					.Replace("p.ghzdays", places.PrevTeam.GHzDays.ToString(CultureInfo.CurrentCulture))
-					.Replace("c.ghzdays", places.WeAre.GHzDays.ToString(CultureInfo.CurrentCulture))
-					.Replace("n.ghzdays", places.NextTeam.GHzDays.ToString(CultureInfo.CurrentCulture))
+					.Replace("p.ghzdays", places.PrevTeam.GHzDays.ToString(CultureInfo.CurrentCulture).Replace(",", "."))
+					.Replace("c.ghzdays", places.WeAre.GHzDays.ToString(CultureInfo.CurrentCulture).Replace(",", "."))
+					.Replace("n.ghzdays", places.NextTeam.GHzDays.ToString(CultureInfo.CurrentCulture).Replace(",", "."))
 					.ToString()
 			);
 			return places;
@@ -237,19 +237,19 @@ namespace GIMPSTeam2Lead
 			Console.WriteLine(RU.TH);
 			Console.WriteLine(RU.TBottom);
 			var r = TotalsOverall();
-			Console.WriteLine($" Totals     | {AsString(r.WeAre.Place, 2)}  | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)}");
+			Console.WriteLine($" Totals     | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)}");
 			r = Report("1001", "tf.json");
-			Console.WriteLine($" TF         | {AsString(r.WeAre.Place, 2)}  | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)}");
+			Console.WriteLine($" TF         | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)}");
 			r = Report("1003", "llt.json");
-			Console.WriteLine($" LLT        | {AsString(r.WeAre.Place, 2)}  | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)}");
+			Console.WriteLine($" LLT        | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)}");
 			r = Report("1004", "dllt.json");
-			Console.WriteLine($" Double LLT | {AsString(r.WeAre.Place, 2)}  | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)}");
+			Console.WriteLine($" Double LLT | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)}");
 			r = Report("1002", "p-1.json");
-			Console.WriteLine($" P-1        | {AsString(r.WeAre.Place, 2)}  | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)}");
+			Console.WriteLine($" P-1        | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)}");
 			r = Report("1005", "ecm.json");
-			Console.WriteLine($" ECM        | {AsString(r.WeAre.Place, 2)}  | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)}");
+			Console.WriteLine($" ECM        | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)}");
 			r = Report("1006", "ecmf.json");
-			Console.WriteLine($" ECMF       | {AsString(r.WeAre.Place, 2)}  | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)}");
+			Console.WriteLine($" ECMF       | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)}");
 			Console.WriteLine(RU.TBottom);
 			Console.ReadKey();
 
