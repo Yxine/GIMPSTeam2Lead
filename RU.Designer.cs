@@ -61,7 +61,7 @@ namespace GIMPSTeam2Lead {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  * Larin Alexsandr                                                                                                    *.
+        ///   Looks up a localized string similar to  * Larin Alexsandr.
         /// </summary>
         internal static string Author {
             get {
@@ -83,16 +83,7 @@ namespace GIMPSTeam2Lead {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  *                                                                                                                    *.
-        /// </summary>
-        internal static string LineBR {
-            get {
-                return ResourceManager.GetString("LineBR", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to  **********************************************************************************************************************.
+        ///   Looks up a localized string similar to  *.
         /// </summary>
         internal static string Mult {
             get {
@@ -101,7 +92,16 @@ namespace GIMPSTeam2Lead {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  ----------------------------------------.
+        ///   Looks up a localized string similar to    Press any key to exit....
+        /// </summary>
+        internal static string PressAKey2Exit {
+            get {
+                return ResourceManager.GetString("PressAKey2Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to    -------------------------------------------------------.
         /// </summary>
         internal static string TBottom {
             get {
@@ -119,7 +119,7 @@ namespace GIMPSTeam2Lead {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  Type       | We | To Leader | To Us.
+        ///   Looks up a localized string similar to     Type   | We | To Leader | To Us     | Lead Team.
         /// </summary>
         internal static string TH {
             get {
@@ -137,7 +137,7 @@ namespace GIMPSTeam2Lead {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  * http://computerraru.ru/software/gimpsteam2lead                                                                     *.
+        ///   Looks up a localized string similar to  * http://computerraru.ru/software/gimpsteam2lead.
         /// </summary>
         internal static string URL {
             get {
