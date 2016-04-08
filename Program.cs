@@ -74,19 +74,29 @@ namespace GIMPSTeam2Lead
 			return team;
 		}
 
-		/// <summary>Дополнение строки пробелами слева</summary>
-		/// <param name="d">Дробное число</param>
-		/// <param name="length">Необходимая длина</param>
-		/// <returns>Строка дополненная пробелами</returns>
-		private static string AsString(decimal d, int length)
+        /// <summary>Дополнение строки пробелами слева</summary>
+        /// <param name="d">Дробное число</param>
+        /// <param name="length">Необходимая длина</param>
+        /// <returns>Строка дополненная пробелами</returns>
+        private static string AsString(decimal d, int length)
 		{
 			var s = d.ToString(CultureInfo.CurrentCulture);
-			while (s.Length < length) s = string.Concat(" ", s);
-			return s;
+		    while (s.Length < length) s = string.Concat(" ", s);
+            return s;
 		}
 
-		/// <summary></summary>
-		private static Places TotalsOverall()
+        /// <summary></summary>
+        /// <param name="s"></param>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        private static string AsString(string s, int length)
+        {
+            while (s.Length < length) s = string.Concat(s, " ");
+            return s;
+        }
+
+        /// <summary></summary>
+        private static Places TotalsOverall()
 		{
 
 			var places = new Places();
@@ -230,25 +240,26 @@ namespace GIMPSTeam2Lead
 			Console.WriteLine($"   Team: {_teamName}");
 			Console.ForegroundColor = ConsoleColor.Gray;
 			Console.WriteLine();
+			Console.WriteLine(RU.TBottom);
 			Console.WriteLine(RU.TH);
 			Console.WriteLine(RU.TBottom);
 			var r = TotalsOverall();
-			Console.WriteLine($"    Totals | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)} | {r.PrevTeam.Name}");
+			Console.WriteLine($"   | Totals | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)} | {AsString(r.PrevTeam.Name, 30)} |");
 			r = Report("1001", "tf.json");
-			Console.WriteLine($"    TF     | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)} | {r.PrevTeam.Name}");
+			Console.WriteLine($"   | TF     | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)} | {AsString(r.PrevTeam.Name, 30)} |");
 			r = Report("1003", "llt.json");
-			Console.WriteLine($"    LLT    | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)} | {r.PrevTeam.Name}");
+			Console.WriteLine($"   | LLT    | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)} | {AsString(r.PrevTeam.Name, 30)} |");
 			r = Report("1004", "dllt.json");
-			Console.WriteLine($"    DLLT   | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)} | {r.PrevTeam.Name}");
+			Console.WriteLine($"   | DLLT   | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)} | {AsString(r.PrevTeam.Name, 30)} |");
 			r = Report("1002", "p-1.json");
-			Console.WriteLine($"    P-1    | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)} | {r.PrevTeam.Name}");
+			Console.WriteLine($"   | P-1    | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)} | {AsString(r.PrevTeam.Name, 30)} |");
 			r = Report("1005", "ecm.json");
-			Console.WriteLine($"    ECM    | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)} | {r.PrevTeam.Name}");
+			Console.WriteLine($"   | ECM    | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)} | {AsString(r.PrevTeam.Name, 30)} |");
 			r = Report("1006", "ecmf.json");
-			Console.WriteLine($"    ECMF   | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)} | {r.PrevTeam.Name}");
+			Console.WriteLine($"   | ECMF   | {AsString(r.WeAre.Place, 2)} | {AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 9)} | {AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 9)} | {AsString(r.PrevTeam.Name, 30)} |");
 			Console.WriteLine(RU.TBottom);
 			Console.WriteLine();
-			Console.WriteLine(RU.PressAKey2Exit);
+			Console.Write(RU.PressAKey2Exit);
 			Console.ReadKey();
 
 		}
