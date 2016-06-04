@@ -128,10 +128,10 @@
     <value>ComputerraRU</value>
   </data>
   <data name="TH" xml:space="preserve">
-    <value>   | Type   | We |  To Leader | Lead Team                 |      To Us | Follower Team             |</value>
+    <value>   | Type   | We * GHz-Days   |  To Leader | Lead Team                 |      To Us | Follower Team             |</value>
   </data>
   <data name="TBottom" xml:space="preserve">
-    <value>   -------------------------------------------------------------------------------------------------</value>
+    <value>   --------------------------------------------------------------------------------------------------------------</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>GIMPS Team 2 Lead</value>

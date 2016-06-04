@@ -3,7 +3,7 @@
 Console software for getting info about [GIMPS](http://www.mersenne.org) teams that are the nearest opponents for your team.
 
 # UI
-![](http://computerraru.ru/static/i/software/gimpsteam2lead/screen04.png)
+![](http://computerraru.ru/static/i/software/gimpsteam2lead/screen05.png)
 
 # Using
 You can just start the program without any command-line argument and you'll get information about my [GIMPS](http://www.mersenne.org) team ComputerraRU. Or you can get report for any other [GIMPS](http://www.mersenne.org) team by setting it's name in first command-line parameter as follows:
