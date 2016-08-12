@@ -101,7 +101,7 @@ namespace GIMPSTeam2Lead {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to    --------------------------------------------------------------------------------------------------------------.
+        ///   Looks up a localized string similar to    ---------------------------------------------------------------------------------------------------------------.
         /// </summary>
         internal static string TBottom {
             get {
@@ -119,7 +119,7 @@ namespace GIMPSTeam2Lead {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to    | Type   | We * GHz-Days   |  To Leader | Lead Team                 |      To Us | Follower Team             |.
+        ///   Looks up a localized string similar to    | Type   | We * GHz-Days   |  To Leader | Lead Team                 |      To Us | Follower Team              |.
         /// </summary>
         internal static string TH {
             get {
