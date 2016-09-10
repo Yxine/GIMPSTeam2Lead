@@ -1,11 +1,14 @@
 # N.B.!
 
-Guyz! New structure of project from the start of September, 2016!
-Now, all sources are in /SourceCode folder, and from now I deliver U binaries compiled to X32/X86 and X64 architecture in /Compiled folder.
+Guyz!
+
+New structure of project from the start of September, 2016!
+Now, all sources are in /SourceCode folder, and from now I deliver you binaries compiled to X32/X86 and X64 architecture in /Compiled folder.
 
 Have Some!
 
-UR any did anything x32 still argh??? Wow! Ок, I did it for Ur old OS systems!
+Are you did anything way x32 technics still? Argh??? Wow! Ок, I did it for your old OS systems - a 32-bit architecture of app!
+
 And also I moved all graphics inside the GH project!
 
 # GIMPS Team 2 Lead
