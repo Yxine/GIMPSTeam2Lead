@@ -1,6 +1,10 @@
 # N.B.!
 
-Guyz! New structure of project from the start of September, 2016! Now, all sources are in /SourceCode folder, and from now I deliver U binaries compiled to X32/X86 and X64 architecture in /Compiled folder. Have Some!
+Guyz! New structure of project from the start of September, 2016!
+Now, all sources are in /SourceCode folder, and from now I deliver U binaries compiled to X32/X86 and X64 architecture in /Compiled folder.
+
+Have Some!
+
 UR any did anything x32 still argh??? Wow! Ок, I did it for Ur old OS systems!
 And also I moved all graphics inside the GH project!
 
