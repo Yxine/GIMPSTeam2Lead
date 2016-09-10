@@ -3,7 +3,6 @@
 Console software for getting info about [GIMPS](http://www.mersenne.org) teams that are the nearest opponents for your team.
 
 # UI
-![](http://computerraru.ru/static/i/software/gimpsteam2lead/screen04.png)
 ![GIMPS Team 2 Lead Screen](https://github.com/Yxine/GIMPSTeam2Lead/blob/master/screen.png "GIMPS Team 2 Lead Screen")
 
 # Using
