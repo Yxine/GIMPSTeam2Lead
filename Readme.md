@@ -4,6 +4,7 @@ Console software for getting info about [GIMPS](http://www.mersenne.org) teams t
 
 # UI
 ![](http://computerraru.ru/static/i/software/gimpsteam2lead/screen04.png)
+![GIMPS Team 2 Lead Screen](https://github.com/Yxine/GIMPSTeam2Lead/blob/master/screen.png "GIMPS Team 2 Lead Screen")
 
 # Using
 You can just start the program without any command-line argument and you'll get information about my [GIMPS](http://www.mersenne.org) team ComputerraRU. Or you can get report for any other [GIMPS](http://www.mersenne.org) team by setting it's name in first command-line parameter as follows:
