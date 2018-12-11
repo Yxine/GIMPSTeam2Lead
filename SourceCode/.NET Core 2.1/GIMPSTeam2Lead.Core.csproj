@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+    <AssemblyVersion>2018.12.11.210</AssemblyVersion>
+    <FileVersion>2018.12.11.210</FileVersion>
+    <StartupObject>GIMPSTeam2Lead.Program</StartupObject>
+    <AssemblyName>GIMPSTeam2Lead</AssemblyName>
+    <Version>2018.12.11</Version>
+    <Authors>Larin Alexsandr</Authors>
+    <Company>Yxinity Group</Company>
+    <Product>GIMPS Team 2 Lead</Product>
+    <Copyright>Copyright © 2016-2018, Yxinity Group</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>w:\Projects\GIMPSTeam2Lead\SourceCode\.NET Core 2.1\GIMPSTeam2Lead.Core.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants />
+    <OutputPath>W:\Projects\GIMPSTeam2Lead\Compiled\.NET Core 2.1\</OutputPath>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Modules\Program.cs" Link="Program.cs" />
+  </ItemGroup>
+
+</Project>
