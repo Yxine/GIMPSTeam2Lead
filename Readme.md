@@ -4,17 +4,6 @@
 
 .NET Core 2.2
 
-# N.B.!
-
-Guyz!
-
-New structure of project from the start of September, 2016!
-Now, all sources are in /SourceCode folder, and from now I deliver you binaries compiled to X32/X86, X64 and Core architecture in /Compiled folder.
-
-And also I moved all graphics inside the Git-Hub project!
-
-Have Some!
-
 # GIMPS Team 2 Lead
 
 Console software for getting info about [GIMPS](http://www.mersenne.org) teams that are the nearest opponents for your team.

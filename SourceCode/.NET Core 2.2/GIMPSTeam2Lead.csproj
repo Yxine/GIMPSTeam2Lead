@@ -16,7 +16,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>w:\Projects\GIMPSTeam2Lead\SourceCode\.NET Core 2.1\GIMPSTeam2Lead.Core.xml</DocumentationFile>
+    <DocumentationFile>w:\Projects\GIMPSTeam2Lead\SourceCode\.NET Core 2.2\GIMPSTeam2Lead.Core.xml</DocumentationFile>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <DefineConstants>DEBUG</DefineConstants>
