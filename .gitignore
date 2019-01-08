@@ -1,9 +1,6 @@
-/SourceCode/.NET Core 2.1/bin
-/SourceCode/.NET Core 2.1/obj
-/SourceCode/.NET Core 2.1/.vs
-/SourceCode/.NET 4.7.2 x64/bin
-/SourceCode/.NET 4.7.2 x64/obj
-/SourceCode/.NET 4.7.2 x64/.vs
-/SourceCode/.NET 4.7.2 x86/bin
-/SourceCode/.NET 4.7.2 x86/obj
-/SourceCode/.NET 4.7.2 x86/.vs
+/SourceCode/.NET Core 2.2/bin
+/SourceCode/.NET Core 2.2/obj
+/SourceCode/.NET Core 2.2/.vs
+/SourceCode/.NET 4.7.2/bin
+/SourceCode/.NET 4.7.2/obj
+/SourceCode/.NET 4.7.2/.vs

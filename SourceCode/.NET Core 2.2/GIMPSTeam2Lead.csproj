@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
-    <AssemblyVersion>2018.12.11.210</AssemblyVersion>
-    <FileVersion>2018.12.11.210</FileVersion>
+    <AssemblyVersion>2019.1.8.22</AssemblyVersion>
+    <FileVersion>2019.1.8.22</FileVersion>
     <StartupObject>GIMPSTeam2Lead.Program</StartupObject>
     <AssemblyName>GIMPSTeam2Lead</AssemblyName>
-    <Version>2018.12.11</Version>
+    <Version>2019.1.8</Version>
     <Authors>Larin Alexsandr</Authors>
     <Company>Yxinity Group</Company>
     <Product>GIMPS Team 2 Lead</Product>
@@ -19,18 +19,21 @@
     <DocumentationFile>w:\Projects\GIMPSTeam2Lead\SourceCode\.NET Core 2.1\GIMPSTeam2Lead.Core.xml</DocumentationFile>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DefineConstants />
-    <OutputPath>W:\Projects\GIMPSTeam2Lead\Compiled\.NET Core 2.1\</OutputPath>
+    <OutputPath>W:\Projects\GIMPSTeam2Lead\Compiled\.NET Core 2.2\</OutputPath>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\Modules\Program.cs" Link="Program.cs" />
+    <Compile Include="..\Modules\Main.cs" Link="Main.cs" />
+    <Compile Include="..\Modules\Methods.cs" Link="Methods.cs" />
+    <Compile Include="..\Modules\Structs.cs" Link="Structs.cs" />
   </ItemGroup>
 
 </Project>
