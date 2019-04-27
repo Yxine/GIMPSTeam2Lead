@@ -1,3 +1,9 @@
+# New Version 2019.4.28
+
+.NET 4.8
+
+.NET Core 2.2.4
+
 # New Version 2019.1.8
 
 .NET 4.7.2 (Any CPU version). X86 and X64 versions combined into one project.

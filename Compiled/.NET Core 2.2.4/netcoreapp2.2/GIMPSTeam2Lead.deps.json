@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "GIMPSTeam2Lead/2019.1.8": {
+        "runtime": {
+          "GIMPSTeam2Lead.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GIMPSTeam2Lead/2019.1.8": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

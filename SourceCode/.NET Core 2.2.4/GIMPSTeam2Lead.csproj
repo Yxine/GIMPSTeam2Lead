@@ -24,7 +24,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DefineConstants />
-    <OutputPath>W:\Projects\GIMPSTeam2Lead\Compiled\.NET Core 2.2\</OutputPath>
+    <OutputPath>..\..\Compiled\.NET Core 2.2.4\</OutputPath>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
@@ -32,8 +32,6 @@
 
   <ItemGroup>
     <Compile Include="..\Modules\Main.cs" Link="Main.cs" />
-    <Compile Include="..\Modules\Methods.cs" Link="Methods.cs" />
-    <Compile Include="..\Modules\Structs.cs" Link="Structs.cs" />
   </ItemGroup>
 
 </Project>
