@@ -1,3 +1,7 @@
+# New Version 2019.11.10
+
+.NET Core 3.0
+
 # New Version 2019.4.28
 
 .NET 4.8

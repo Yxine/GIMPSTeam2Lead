@@ -3,7 +3,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Reflection;
-using System.Globalization;
+using I = System.Globalization.CultureInfo;
 using C = System.Console;
 
 namespace GIMPSTeam2Lead
@@ -89,7 +89,7 @@ namespace GIMPSTeam2Lead
 		/// <returns>Строка дополненная пробелами</returns>
 		private static string AsString(decimal d, int length)
 		{
-			var s = d.ToString(CultureInfo.CurrentCulture);
+			var s = d.ToString(I.CurrentCulture);
 			while (s.Length < length) s = string.Concat(" ", s);
 			return s;
 		}
@@ -105,7 +105,7 @@ namespace GIMPSTeam2Lead
 		/// <returns></returns>
 		private static string AsString(string s, int length)
 		{
-			if (string.IsNullOrWhiteSpace(s)) return string.Empty;
+			if (string.IsNullOrWhiteSpace(s)) return Repeat(' ', length);
 			while (s.Length < length) s = string.Concat(s, " ");
 			return s;
 		}
@@ -187,7 +187,7 @@ namespace GIMPSTeam2Lead
 
 		private static void Print(string s0, string s1, string s2, string s3, string s4, string s5, string s6)
 		{
-			C.WriteLine($"   | {s0} | {s1} * {s2} | {s3} | {s4} | {s5} | {s6} |");
+			C.WriteLine($"  {s0} {s1} {s2} {s3} {s4} {s5} {s6}");
 		}
 
 		/// <summary>Точка входа</summary>
@@ -200,35 +200,80 @@ namespace GIMPSTeam2Lead
 			C.Clear();
 			C.CursorVisible = false;
 			C.Title = "GIMPS Team 2 Lead";
-			
-			C.WriteLine("{0} *{0} * GIMPS Team 2 Lead version {1}{0} * http://computerraru.ru/software/gimpsteam2lead{0} * Larin Alexsandr{0} *{0}", Environment.NewLine, Assembly.GetEntryAssembly().GetName().Version);
+			C.WindowWidth = 150;
+
+			C.ForegroundColor = ConsoleColor.DarkGreen;
+			C.WriteLine();
+			C.WriteLine(" ****************************************************************************************************************************************************");
+			C.WriteLine($" *{string.Empty.PadLeft(146)}*");
+			C.WriteLine($" * GIMPS Team 2 Lead version {Assembly.GetEntryAssembly()?.GetName().Version}{string.Empty.PadLeft(103)}*");
+			C.WriteLine($" * Larin Alexsandr, alexsandr@larin.name{string.Empty.PadLeft(108)}*");
+			C.WriteLine($" *{string.Empty.PadLeft(146)}*");
+			C.WriteLine(" ****************************************************************************************************************************************************");
+			C.WriteLine();
 			C.ForegroundColor = ConsoleColor.White;
-			C.WriteLine($"   Team: {team}{Environment.NewLine}");
+			C.WriteLine($"   Team: {team}");
+			C.WriteLine();
+			C.ForegroundColor = ConsoleColor.DarkYellow;
+			C.WriteLine("   Type   We    GHz-Days  To Leader Lead Team                                To Us Follower Team");
+			C.WriteLine("   ------ -- -----------  --------- ----------------------------------- ---------- ------------------------------------------------------------------");
+			C.WriteLine();
 			C.ForegroundColor = ConsoleColor.Gray;
-			C.WriteLine("   {0}{1}   | Type   | We * GHz-Days    |  To Leader | Lead Team    |      To Us | Follower Team               |{1}   {0}", Repeat('-', 100), Environment.NewLine);
 
-			var r = TotalsOverall(team);
-			Print("Totals", AsString(r.WeAre.Place, 2), AsString(r.WeAre.GHzDays, 11), AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 10), AsString(r.PrevTeam.Name, 12), AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 10), AsString(r.NextTeam.Name, 27));
+			var r1  = TotalsOverall(team);
+			var r2  = Report("1001");
+			var r3  = Report("1002");
+			var r4  = Report("2000");
+			var r5  = Report("2001");
+			var r6  = Report("1005");
+			var r7  = Report("1009");
+			var r8  = Report("1010");
+			var r9  = Report("1006");
+			var r10 = Report("1003");
+			var r11 = Report("1004");
+			var r12 = Report("1007");
+			var r13 = Report("1008");
 
-			r = Report("1001");
-			Print("TF    ", AsString(r.WeAre.Place, 2), AsString(r.WeAre.GHzDays, 11), AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 10), AsString(r.PrevTeam.Name, 12), AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 10), AsString(r.NextTeam.Name, 27));
+			/*
+			<option value="1001" selected="selected">Trial Factoring</option>
+			<option value="1002">P-1 Factoring</option>
+			<option value="2000">First primality tests</option>
+			<option value="2001">Double-check primality tests</option>
+			<option value="1005">ECM on Mersenne numbers</option>
+			<option value="1009">PRP cofactor tests</option>
+			<option value="1010">PRP cofactor double-checks</option>
+			<option value="1006">ECM on Fermat numbers</option>
+			<option value="1003">LL first tests</option>
+			<option value="1004">LL double-checks</option>
+			<option value="1007">PRP tests</option>
+			<option value="1008">PRP double-checks</option>
+			*/
 
-			r = Report("1003");
-			Print("LLT   ", AsString(r.WeAre.Place, 2), AsString(r.WeAre.GHzDays, 11), AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 10), AsString(r.PrevTeam.Name, 12), AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 10), AsString(r.NextTeam.Name, 27));
+			C.ForegroundColor = ConsoleColor.White;
+			Print(" Total ", AsString( r1.WeAre.Place, 2), AsString( r1.WeAre.GHzDays, 11), AsString( r1.PrevTeam.GHzDays -  r1.WeAre.GHzDays, 10), AsString( r1.PrevTeam.Name, 35), AsString(r1.WeAre.GHzDays - r1.NextTeam.GHzDays, 10), AsString(r1.NextTeam.Name, 27));
+			C.WriteLine();
+			C.ForegroundColor = ConsoleColor.Gray;
+			Print(" TF    ", AsString( r2.WeAre.Place, 2), AsString( r2.WeAre.GHzDays, 11), AsString( r2.PrevTeam.GHzDays -  r2.WeAre.GHzDays, 10), AsString( r2.PrevTeam.Name, 35), AsString(r2.WeAre.GHzDays - r2.NextTeam.GHzDays, 10), AsString(r2.NextTeam.Name, 27));
+			Print(" P-1   ", AsString(r3.WeAre.Place, 2), AsString(r3.WeAre.GHzDays, 11), AsString(r3.PrevTeam.GHzDays - r3.WeAre.GHzDays, 10), AsString(r3.PrevTeam.Name, 35), AsString(r3.WeAre.GHzDays - r3.NextTeam.GHzDays, 10), AsString(r3.NextTeam.Name, 27));
+			C.WriteLine();
 
-			r = Report("1004");
-			Print("DLLT  ", AsString(r.WeAre.Place, 2), AsString(r.WeAre.GHzDays, 11), AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 10), AsString(r.PrevTeam.Name, 12), AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 10), AsString(r.NextTeam.Name, 27));
+			Print(" LLFT  ", AsString(r10.WeAre.Place, 2), AsString(r10.WeAre.GHzDays, 11), AsString(r10.PrevTeam.GHzDays - r10.WeAre.GHzDays, 10), AsString(r10.PrevTeam.Name, 35), AsString(r10.WeAre.GHzDays - r10.NextTeam.GHzDays, 10), AsString(r10.NextTeam.Name, 27));
+			Print(" LLDC  ", AsString(r11.WeAre.Place, 2), AsString(r11.WeAre.GHzDays, 11), AsString(r11.PrevTeam.GHzDays - r11.WeAre.GHzDays, 10), AsString(r11.PrevTeam.Name, 35), AsString(r11.WeAre.GHzDays - r11.NextTeam.GHzDays, 10), AsString(r11.NextTeam.Name, 27));
+			C.WriteLine();
 
-			r = Report("1002");
-			Print("P-1   ", AsString(r.WeAre.Place, 2), AsString(r.WeAre.GHzDays, 11), AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 10), AsString(r.PrevTeam.Name, 12), AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 10), AsString(r.NextTeam.Name, 27));
-
-			r = Report("1005");
-			Print("ECM   ", AsString(r.WeAre.Place, 2), AsString(r.WeAre.GHzDays, 11), AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 10), AsString(r.PrevTeam.Name, 12), AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 10), AsString(r.NextTeam.Name, 27));
-
-			r = Report("1006");
-			Print("ECMF  ", AsString(r.WeAre.Place, 2), AsString(r.WeAre.GHzDays, 11), AsString(r.PrevTeam.GHzDays - r.WeAre.GHzDays, 10), AsString(r.PrevTeam.Name, 12), AsString(r.WeAre.GHzDays - r.NextTeam.GHzDays, 10), AsString(r.NextTeam.Name, 27));
-
-			C.WriteLine("   {0}{1}{1}   Press any key to exit...", Repeat('-', 100), Environment.NewLine);
+			Print(" ECMM  ", AsString(r6.WeAre.Place, 2), AsString(r6.WeAre.GHzDays, 11), AsString(r6.PrevTeam.GHzDays - r6.WeAre.GHzDays, 10), AsString(r6.PrevTeam.Name, 35), AsString(r6.WeAre.GHzDays - r6.NextTeam.GHzDays, 10), AsString(r6.NextTeam.Name, 27));
+			Print(" ECMF  ", AsString(r9.WeAre.Place, 2), AsString(r9.WeAre.GHzDays, 11), AsString(r9.PrevTeam.GHzDays - r9.WeAre.GHzDays, 10), AsString(r9.PrevTeam.Name, 35), AsString(r9.WeAre.GHzDays - r9.NextTeam.GHzDays, 10), AsString(r9.NextTeam.Name, 27));
+			C.WriteLine();
+			Print(" FPT   ", AsString( r4.WeAre.Place, 2), AsString( r4.WeAre.GHzDays, 11), AsString( r4.PrevTeam.GHzDays -  r4.WeAre.GHzDays, 10), AsString( r4.PrevTeam.Name, 35), AsString(r4.WeAre.GHzDays - r4.NextTeam.GHzDays, 10), AsString(r4.NextTeam.Name, 27));
+			Print(" DCPT  ", AsString( r5.WeAre.Place, 2), AsString( r5.WeAre.GHzDays, 11), AsString( r5.PrevTeam.GHzDays -  r5.WeAre.GHzDays, 10), AsString( r5.PrevTeam.Name, 35), AsString(r5.WeAre.GHzDays - r5.NextTeam.GHzDays, 10), AsString(r5.NextTeam.Name, 27));
+			Print(" PRPCDC", AsString( r8.WeAre.Place, 2), AsString( r8.WeAre.GHzDays, 11), AsString( r8.PrevTeam.GHzDays -  r8.WeAre.GHzDays, 10), AsString( r8.PrevTeam.Name, 35), AsString(r8.WeAre.GHzDays - r8.NextTeam.GHzDays, 10), AsString(r8.NextTeam.Name, 27));
+			Print(" PRPT  ", AsString(r12.WeAre.Place, 2), AsString(r12.WeAre.GHzDays, 11), AsString(r12.PrevTeam.GHzDays - r12.WeAre.GHzDays, 10), AsString(r12.PrevTeam.Name, 35), AsString(r12.WeAre.GHzDays - r12.NextTeam.GHzDays, 10), AsString(r12.NextTeam.Name, 27));
+			C.WriteLine();
+			Print(" PRPCT ", AsString(r7.WeAre.Place, 2), AsString(r7.WeAre.GHzDays, 11), AsString(r7.PrevTeam.GHzDays - r7.WeAre.GHzDays, 10), AsString(r7.PrevTeam.Name, 35), AsString(r7.WeAre.GHzDays - r7.NextTeam.GHzDays, 10), AsString(r7.NextTeam.Name, 27));
+			Print(" PRPDC ", AsString(r13.WeAre.Place, 2), AsString(r13.WeAre.GHzDays, 11), AsString(r13.PrevTeam.GHzDays - r13.WeAre.GHzDays, 10), AsString(r13.PrevTeam.Name, 35), AsString(r13.WeAre.GHzDays - r13.NextTeam.GHzDays, 10), AsString(r13.NextTeam.Name, 27));
+			C.ForegroundColor = ConsoleColor.DarkGray;
+			C.WriteLine();
+			C.WriteLine("   Press any key to exit...");
 			C.ReadKey();
 
 		}
