@@ -1,3 +1,9 @@
+# New Version 2020.01.25
+
+.NET Core 3.1
+
+Fixed bug with 1st place results
+
 # New Version 2019.11.10
 
 .NET Core 3.0
@@ -19,7 +25,7 @@
 Console software for getting info about [GIMPS](http://www.mersenne.org) teams that are the nearest opponents for your team.
 
 # UI
-![GIMPS Team 2 Lead Screen](https://github.com/Yxine/GIMPSTeam2Lead/blob/master/screen.png "GIMPS Team 2 Lead Screen")
+![GIMPS Team 2 Lead Screen](https://github.com/Yxine/GIMPSTeam2Lead/blob/master/screen.png?raw=true)
 
 # Using
 You can just start the program without any command-line argument and you'll get information about my [GIMPS](http://www.mersenne.org) team ComputerraRU. Or you can get report for any other [GIMPS](http://www.mersenne.org) team by setting it's name in first command-line parameter as follows:

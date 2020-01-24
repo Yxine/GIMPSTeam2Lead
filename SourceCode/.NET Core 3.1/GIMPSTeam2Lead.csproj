@@ -2,21 +2,21 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
-    <AssemblyVersion>2019.1.8.22</AssemblyVersion>
-    <FileVersion>2019.1.8.22</FileVersion>
+    <AssemblyVersion>2020.1.25.31</AssemblyVersion>
+    <FileVersion>2020.1.25.31</FileVersion>
     <StartupObject>GIMPSTeam2Lead.Program</StartupObject>
     <AssemblyName>GIMPSTeam2Lead</AssemblyName>
-    <Version>2019.1.8</Version>
+    <Version>2020.1.25</Version>
     <Authors>Larin Alexsandr</Authors>
     <Company>Yxinity Group</Company>
     <Product>GIMPS Team 2 Lead</Product>
-    <Copyright>Copyright © 2016-2018, Yxinity Group</Copyright>
+    <Copyright>Copyright © 2016-2020, Yxinity Group</Copyright>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>a:\Projects\Software\GIMPSTeam2Lead\SourceCode\.NET Core 3.0\GIMPSTeam2Lead.xml</DocumentationFile>
+    <DocumentationFile>a:\Projects\Software\GIMPSTeam2Lead\SourceCode\.NET Core 3.1\GIMPSTeam2Lead.xml</DocumentationFile>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <DefineConstants>DEBUG</DefineConstants>
@@ -25,7 +25,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DefineConstants />
-    <OutputPath>..\..\Compiled\.NET Core 3.0\</OutputPath>
+    <OutputPath>..\..\Compiled\.NET Core 3.1\</OutputPath>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>

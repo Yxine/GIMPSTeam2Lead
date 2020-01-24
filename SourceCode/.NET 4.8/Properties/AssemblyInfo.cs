@@ -10,10 +10,10 @@ using System.Runtime.InteropServices;
 #endif
 [assembly: AssemblyCompany("Yxinity Group")]
 [assembly: AssemblyProduct("GIMPS Team 2 Lead")]
-[assembly: AssemblyCopyright("Copyright © 2016-2019, Yxinity Group")]
+[assembly: AssemblyCopyright("Copyright © 2016-2020, Yxinity Group")]
 [assembly: AssemblyTrademark("Yxinity Group")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 [assembly: Guid("8ce3a284-43ae-40d5-9d73-3e55dedf3dd1")]
-[assembly: AssemblyVersion("2019.11.10.*")]
-[assembly: AssemblyFileVersion("2019.11.10.48")]
+[assembly: AssemblyVersion("2020.1.24.*")]
+[assembly: AssemblyFileVersion("2020.1.24.48")]
