@@ -1,4 +1,5 @@
-/**/bin
-/**/obj
-/**/.vs
-/**/Debug
+/SourceCode/bin
+/SourceCode/obj
+/SourceCode/.vs
+/SourceCode/GIMPSTeam2Lead.csproj.user
+/SourceCode/GIMPSTeam2Lead.xml

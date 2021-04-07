@@ -1,43 +1,55 @@
-# New Version 2020.01.25
+# GIPMPS Team 2 Lead
+
+> Version 07.04.2021
+
+Console software for getting info about [GIMPS](http://www.mersenne.org) teams that are the nearest opponents for your team.
+
+## History
+
+### 2021.04.07
+
+.NET 5.0
+
+### 2020.01.25
 
 .NET Core 3.1
 
 Fixed bug with 1st place results
 
-# New Version 2019.11.10
+### 2019.11.10
 
 .NET Core 3.0
 
-# New Version 2019.4.28
+### 2019.4.28
 
 .NET 4.8
 
 .NET Core 2.2.4
 
-# New Version 2019.1.8
+### 2019.1.8
 
 .NET 4.7.2 (Any CPU version). X86 and X64 versions combined into one project.
 
 .NET Core 2.2
 
-# GIMPS Team 2 Lead
+## UI
 
-Console software for getting info about [GIMPS](http://www.mersenne.org) teams that are the nearest opponents for your team.
-
-# UI
 ![GIMPS Team 2 Lead Screen](https://github.com/Yxine/GIMPSTeam2Lead/blob/master/screen.png?raw=true)
 
-# Using
+## Using
+
 You can just start the program without any command-line argument and you'll get information about my [GIMPS](http://www.mersenne.org) team ComputerraRU. Or you can get report for any other [GIMPS](http://www.mersenne.org) team by setting it's name in first command-line parameter as follows:
+
 ```sh
 > GIMPSTeam2Lead.exe [TeamName]
 ```
 
-# Join my team
+## Join my team
 
 Join my [GIMPS](http://www.mersenne.org) team ComputerraRU **[here](http://computerraru.ru)**.
 
-# Links
+## Links
+
 - [Twitter][tw]
 - [VKontakte][vk]
 - [Facebook][fb]
