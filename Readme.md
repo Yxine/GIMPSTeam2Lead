@@ -1,10 +1,14 @@
 # GIPMPS Team 2 Lead
 
-> Version 07.04.2021
+> Version 2023.02.22
 
 Console software for getting info about [GIMPS](http://www.mersenne.org) teams that are the nearest opponents for your team.
 
 ## History
+
+### 2023.02.22
+
+.NET 7.0
 
 ### 2021.04.07
 

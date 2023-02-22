@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0-windows10.0.22621.0</TargetFramework>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+    <AssemblyVersion>2023.2.22.70</AssemblyVersion>
+    <FileVersion>2023.2.27.70</FileVersion>
+    <StartupObject>GIMPSTeam2Lead.Program</StartupObject>
+    <AssemblyName>GIMPSTeam2Lead</AssemblyName>
+    <Version>2023.2.22</Version>
+    <Authors>Larin Alexsandr</Authors>
+    <Company>Yxinity Group</Company>
+    <Product>GIMPS Team 2 Lead</Product>
+    <Copyright>Copyright @ 2016-2023, Yxinity Group</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>a:\Projects\Software\GIMPSTeam2Lead\SourceCode\GIMPSTeam2Lead.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG</DefineConstants>
+    <OutputPath />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants />
+    <OutputPath>..\..\Compiled\</OutputPath>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Methods.cs" />
+    <Compile Remove="Structs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="clean.cmd" />
+  </ItemGroup>
+</Project>
